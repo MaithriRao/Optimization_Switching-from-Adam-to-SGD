@@ -23,12 +23,11 @@ We then compared the results for three optimizers: Adam, SGD and SWATS, with lea
 |ResNet-34 | SGD | - | intial LR: 0.001 | 89% |
 |ResNet-34 | Adam | - | intial LR: 0.001  | 93% |
 |ResNet-34 | SWATS | 1162 | intial LR: 0.001 and switching LR: 2.67 | 91% |
-|DenseNet-121| SGD |  |  |  |
-|DenseNet-121| Adam |  |  |  |
-|DenseNet-121| SWATS |  |  |  |
+
 
 
 # Conclusion 
+We can say both Adam and SGD both have their advantages and disadvantages. The optimization research has shown us that SGD generalizes better and converges with uniform learning rate, but Adam is faster than SGD given their rapid initial training, and ability to deal with ill-scaled problems. We tried to implement and understand the hybrid method SWATS, that combines the benefits of both Adam and SGD. We concluded that SWATS doesn’t lag behind SGD in testing error and  can be regarded as an appropriate switching position. But the training speed doesn’t seem to benefit largely from the Adam stage. Most importantly, there is no “intermediate stage” of training where the error of SWATS is better than both of the primary optimizer.
 
 
 
